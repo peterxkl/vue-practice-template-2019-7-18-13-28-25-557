@@ -1,26 +1,26 @@
 <template>
-    <div id="example-1">
-        <button id="add" @click="add">+</button>
+    <div >
+        <button @click="add">+</button>
         <span>{{count}}</span>
-        <button id="sub" @click="sub">-</button>
+        <button @click="sub">-</button>
     </div>
 </template>
 
 <script>
     export default {
         name: "test01",
-        el: '#example-1',
         data () {
             return {
+                message: 0,
                 count: 0,
             }
         },
         methods: {
             add: function () {
-                count++;
+                this.count++;
             },
             sub: function () {
-                count--;
+                this.count--;
             }
         }
     }

@@ -12,6 +12,7 @@
     el: '#example-1',
     data () {
       return {
+        message: 0,
         count: 0,
       }
     },
