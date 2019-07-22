@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import test01 from './test01';
+    import test01 from './count';
     export default {
         name: "123456",
         components: {

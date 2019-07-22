@@ -1,7 +1,7 @@
 <template>
     <div >
         <button @click="add">+</button>
-        <span>{{count}}</span>
+        <span>{{this.$store.state.count}}</span>
         <button @click="sub">-</button>
     </div>
 </template>
@@ -11,16 +11,20 @@
         name: "test01",
         data () {
             return {
-                message: 0,
-                count: 0,
+
             }
         },
         methods: {
             add: function () {
-                this.count++;
+                this.$store.commit('add')
             },
             sub: function () {
-                this.count--;
+                this.$store.commit('sub')
+            }
+        },
+        computed: {
+            count () {
+                return this.$store.state.count
             }
         }
     }
